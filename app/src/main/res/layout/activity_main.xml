@@ -7,53 +7,47 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
-
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/green"
-        android:orientation="vertical">
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purplePastel"
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="16dp"
-            android:fontFamily="@font/bahnschrift"
-            android:text="@string/bandeau"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            android:visibility="visible" />
-    </LinearLayout>
+        android:elevation="4dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="158dp"
+        android:animationCache="false"
+        android:orientation="vertical"
+        android:scrollbarThumbHorizontal="@color/pastel"
+        android:scrollbarThumbVertical="@color/pastel">
 
         <TextView
-            android:id="@+id/tv_prenom"
+            android:id="@+id/tv_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Prenom" />
+            android:text="Nom d'utilisateur" />
+
 
         <EditText
-            android:id="@+id/et_prenom"
+            android:id="@+id/et_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
             android:text="" />
 
         <TextView
-            android:id="@+id/tv_nom"
+            android:id="@+id/tv_code"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nom" />
+            android:text="Code Secret" />
 
         <EditText
-            android:id="@+id/et_nom"
+            android:id="@+id/et_code"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:text="" />
     </LinearLayout>
 
@@ -67,7 +61,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onClickValider"
-            android:text="Valider" />
+            android:text="Valider"
+            app:iconTint="#00FFFFFF" />
     </LinearLayout>
 
 </LinearLayout>

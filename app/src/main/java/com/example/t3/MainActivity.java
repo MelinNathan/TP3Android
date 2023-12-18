@@ -11,36 +11,53 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText edPrenom;
-    TextView tvPrenom;
+    EditText etUsername;
+    EditText etPassword;
+
     Button valider;
+    String trueUsername = "Nathan";
+
+    String truePassword = "Mattys>all";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar=findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         valider = (Button) findViewById(R.id.btn_valider);
-      /*  valider.setOnClickListener(new View.OnClickListener() {
+        valider.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edPrenom = (EditText) findViewById(R.id.et_prenom);
-                String prenom = edPrenom.getText().toString();
-                Intent intent = new Intent(getBaseContext() , afficherMessage.class);
-                intent.putExtra("name", prenom);
-              //  Toast.makeText(getBaseContext(), "Hello", Toast.LENGTH_LONG).show();
-                startActivity(intent);
+                etUsername = (EditText) findViewById(R.id.et_username);
+                etPassword = (EditText) findViewById(R.id.et_code);
+                String username = etUsername.getText().toString();
+                String password = etPassword.getText().toString();
+
+                if ((username.equals(trueUsername)) && (password.equals(truePassword))){
+                    Toast.makeText(getBaseContext(), "Hello", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(getBaseContext() , afficherMessage.class);
+                    intent.putExtra("name", username);
+
+                    startActivity(intent);
+                } else{
+                    Toast.makeText(getBaseContext(), "Le mot de passe ou le code secret est incorect", Toast.LENGTH_LONG).show();
+                }
             }
-        });*/
+        });
     }
+
     public void onClickValider(View view){
-        edPrenom = (EditText) findViewById(R.id.et_prenom);
-        String prenom = edPrenom.getText().toString();
+        etUsername = (EditText) findViewById(R.id.et_username);
+        String username = etUsername.getText().toString();
         Intent intent = new Intent(this , afficherMessage.class);
-        intent.putExtra("name", prenom);
+        intent.putExtra("username", username);
         //  Toast.makeText(getBaseContext(), "Hello", Toast.LENGTH_LONG).show();
         startActivity(intent);
     }
@@ -57,10 +74,10 @@ public class MainActivity extends AppCompatActivity {
             return (true);
         }
         if (item.getItemId() == R.id.itmEnregistrer) {
-            edPrenom = (EditText) findViewById(R.id.et_prenom);
-            String prenom = edPrenom.getText().toString();
+            etUsername = (EditText) findViewById(R.id.et_username);
+            String username = etUsername.getText().toString();
             Intent intent = new Intent(this, afficherMessage.class);
-            intent.putExtra("name", prenom);
+            intent.putExtra("name", username);
             startActivity(intent);
             return (true);
         }

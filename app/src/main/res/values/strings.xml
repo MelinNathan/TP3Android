@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">T3</string>
     <string name="bandeau">Menu</string>
+    <string name="nom">Nom : </string>
+
+    <string name="prenom">Prénom : </string>
+
+    <string name="phone">Téléphone : </string>
+
+    <string name="typePhone">Type de téléphone : </string>
+
+    <string name="ajouter">Ajouter</string>
+
+    <string name="radioPortable">Portable</string>
+
+    <string name="radioMaison">Maison</string>
+
+    <string name="radioEntreprise">Entreprise</string>
 </resources>
