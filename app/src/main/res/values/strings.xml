@@ -24,4 +24,10 @@
     <string name="radioHomme">Homme</string>
     <string name="radioFemme">Femme</string>
     <string name="submit">Valider</string>
+
+
+    <string name="itmImc">Calculatrice IMC (activité4 / TP2)</string>
+    <string name="itmAnnuaire">Valider (Activité 3 / TP1)</string>
+    <string name="itmEnregistrer">Enregistrer</string>
+    <string name="itmSaluer">Saluer</string>
 </resources>
