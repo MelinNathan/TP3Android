@@ -16,4 +16,12 @@
     <string name="radioMaison">Maison</string>
 
     <string name="radioEntreprise">Entreprise</string>
+    <string name="date">Date de naissance : </string>
+
+    <string name="weight">Poids (en g): </string>
+    <string name="height">Taille (en cm): </string>
+    <string name="typeSexe">Sexe bioglogique : </string>
+    <string name="radioHomme">Homme</string>
+    <string name="radioFemme">Femme</string>
+    <string name="submit">Valider</string>
 </resources>

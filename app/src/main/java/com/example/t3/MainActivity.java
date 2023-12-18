@@ -19,9 +19,9 @@ public class MainActivity extends AppCompatActivity {
     EditText etPassword;
 
     Button valider;
-    String trueUsername = "Nathan";
+    String trueUsername = "1";
 
-    String truePassword = "Mattys>all";
+    String truePassword = "1";
 
 
     @Override
@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if ((username.equals(trueUsername)) && (password.equals(truePassword))){
                     Toast.makeText(getBaseContext(), "Hello", Toast.LENGTH_LONG).show();
+
                     Intent intent = new Intent(getBaseContext() , afficherMessage.class);
                     intent.putExtra("name", username);
 
