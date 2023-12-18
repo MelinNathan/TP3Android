@@ -34,6 +34,7 @@ public class afficherMessage extends AppCompatActivity {
         if (item.getItemId() == R.id.itmEnregistrer) {
 //            etUsername = (EditText) findViewById(R.id.et_username);
 //            String username = etUsername.getText().toString();
+            //test
             Intent intent = new Intent(this, afficherMessage.class);
             intent.putExtra("name", "test");
             startActivity(intent);
