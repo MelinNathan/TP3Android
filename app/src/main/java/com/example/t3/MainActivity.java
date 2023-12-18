@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.itmEnregistrer) {
             etUsername = (EditText) findViewById(R.id.et_username);
             String username = etUsername.getText().toString();
-            Intent intent = new Intent(this, afficherMessage.class);
+            Intent intent = new Intent(this, imc.class);
             intent.putExtra("name", username);
             startActivity(intent);
             return (true);
