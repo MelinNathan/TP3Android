@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:layout_width="wrap_content"
+        android:id="@+id/itm_annuaire"
+        android:layout_height="wrap_content"
+        android:title="Annuaire" />
+    <item
+        android:layout_width="wrap_content"
+        android:id="@+id/itm_principal"
+        android:layout_height="wrap_content"
+        android:title="Menu Principal" />
+   </menu>

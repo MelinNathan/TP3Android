@@ -12,6 +12,6 @@
     <item
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:title="@+id/itmIMC"
+        android:title="IMC"
         android:id="@+id/itmIMC" />
 </menu>

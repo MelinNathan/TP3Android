@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         valider = (Button) findViewById(R.id.btn_valider);
-        valider.setOnClickListener(new View.OnClickListener() {
+      /*  valider.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 etUsername = (EditText) findViewById(R.id.et_username);
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getBaseContext(), "Le mot de passe ou le code secret est incorect", Toast.LENGTH_LONG).show();
                 }
             }
-        });
+        });*/
     }
 
     public void onClickValider(View view){
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         String username = etUsername.getText().toString();
         Intent intent = new Intent(this , afficherMessage.class);
         intent.putExtra("username", username);
-        //  Toast.makeText(getBaseContext(), "Hello", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), "Hello", Toast.LENGTH_LONG).show();
         startActivity(intent);
     }
     @Override
@@ -82,7 +82,12 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             return (true);
         }
-
+        if (item.getItemId() == R.id.itmIMC) {
+            Intent intent = new Intent (this, imc.class);
+            Toast.makeText(this, "Hello imc", Toast.LENGTH_LONG).show();
+           startActivity(intent);
+            return (true);
+        }
         return(super.onOptionsItemSelected(item));
     }
 }

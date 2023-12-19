@@ -1,7 +1,6 @@
 package com.example.t3;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -12,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+
 public class imc extends AppCompatActivity{
     // Retrieve references to the views
     private EditText inputHeight;
@@ -20,11 +19,12 @@ public class imc extends AppCompatActivity{
     private TextView result;
     private TextView meaning;
 
+    Bundle bundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.imc);
+        setContentView(R.layout.activity_imc);
 
 
         inputHeight = findViewById(R.id.inputHeight);
@@ -56,9 +56,29 @@ public class imc extends AppCompatActivity{
             }
         });
     }
+    @Override
+    public boolean onCreateOptionsMenu (Menu menu){
+        getMenuInflater().inflate(R.menu.menu_imc, menu);
+        return (super.onCreateOptionsMenu(menu));
+    }
+    @Override
+    public boolean onOptionsItemSelected (MenuItem item) {
 
+        if (item.getItemId() == R.id.itm_annuaire) {
+            Intent intent = new Intent(this, afficherMessage.class);
+            startActivity(intent);
+            return (true);
+        }
+        if (item.getItemId() == R.id.itm_principal) {
 
-    private Double imcFunction() {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            return (true);
+        }
+        return false;
+    }
+
+    private double imcFunction() {
         try {
             String tailleStr = inputHeight.getText().toString();
             String poidsStr = inputWeight.getText().toString();
